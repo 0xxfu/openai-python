@@ -18,7 +18,10 @@ from ..._utils import (
 )
 from ..._compat import cached_property
 from ..._resource import SyncAPIResource, AsyncAPIResource
-from ..._response import to_streamed_response_wrapper, async_to_streamed_response_wrapper
+from ..._response import (
+    to_streamed_response_wrapper,
+    async_to_streamed_response_wrapper,
+)
 from ..._streaming import Stream, AsyncStream
 from ...types.chat import (
     ChatCompletionAudioParam,
@@ -32,9 +35,15 @@ from ...types.chat.chat_completion_modality import ChatCompletionModality
 from ...types.chat.chat_completion_tool_param import ChatCompletionToolParam
 from ...types.chat.chat_completion_audio_param import ChatCompletionAudioParam
 from ...types.chat.chat_completion_message_param import ChatCompletionMessageParam
-from ...types.chat.chat_completion_stream_options_param import ChatCompletionStreamOptionsParam
-from ...types.chat.chat_completion_prediction_content_param import ChatCompletionPredictionContentParam
-from ...types.chat.chat_completion_tool_choice_option_param import ChatCompletionToolChoiceOptionParam
+from ...types.chat.chat_completion_stream_options_param import (
+    ChatCompletionStreamOptionsParam,
+)
+from ...types.chat.chat_completion_prediction_content_param import (
+    ChatCompletionPredictionContentParam,
+)
+from ...types.chat.chat_completion_tool_choice_option_param import (
+    ChatCompletionToolChoiceOptionParam,
+)
 
 __all__ = ["Completions", "AsyncCompletions"]
 
@@ -77,7 +86,9 @@ class Completions(SyncAPIResource):
         modalities: Optional[List[ChatCompletionModality]] | NotGiven = NOT_GIVEN,
         n: Optional[int] | NotGiven = NOT_GIVEN,
         parallel_tool_calls: bool | NotGiven = NOT_GIVEN,
-        prediction: Optional[ChatCompletionPredictionContentParam] | NotGiven = NOT_GIVEN,
+        prediction: (
+            Optional[ChatCompletionPredictionContentParam] | NotGiven
+        ) = NOT_GIVEN,
         presence_penalty: Optional[float] | NotGiven = NOT_GIVEN,
         response_format: completion_create_params.ResponseFormat | NotGiven = NOT_GIVEN,
         seed: Optional[int] | NotGiven = NOT_GIVEN,
@@ -85,7 +96,9 @@ class Completions(SyncAPIResource):
         stop: Union[Optional[str], List[str]] | NotGiven = NOT_GIVEN,
         store: Optional[bool] | NotGiven = NOT_GIVEN,
         stream: Optional[Literal[False]] | NotGiven = NOT_GIVEN,
-        stream_options: Optional[ChatCompletionStreamOptionsParam] | NotGiven = NOT_GIVEN,
+        stream_options: (
+            Optional[ChatCompletionStreamOptionsParam] | NotGiven
+        ) = NOT_GIVEN,
         temperature: Optional[float] | NotGiven = NOT_GIVEN,
         tool_choice: ChatCompletionToolChoiceOptionParam | NotGiven = NOT_GIVEN,
         tools: Iterable[ChatCompletionToolParam] | NotGiven = NOT_GIVEN,
@@ -320,14 +333,18 @@ class Completions(SyncAPIResource):
         modalities: Optional[List[ChatCompletionModality]] | NotGiven = NOT_GIVEN,
         n: Optional[int] | NotGiven = NOT_GIVEN,
         parallel_tool_calls: bool | NotGiven = NOT_GIVEN,
-        prediction: Optional[ChatCompletionPredictionContentParam] | NotGiven = NOT_GIVEN,
+        prediction: (
+            Optional[ChatCompletionPredictionContentParam] | NotGiven
+        ) = NOT_GIVEN,
         presence_penalty: Optional[float] | NotGiven = NOT_GIVEN,
         response_format: completion_create_params.ResponseFormat | NotGiven = NOT_GIVEN,
         seed: Optional[int] | NotGiven = NOT_GIVEN,
         service_tier: Optional[Literal["auto", "default"]] | NotGiven = NOT_GIVEN,
         stop: Union[Optional[str], List[str]] | NotGiven = NOT_GIVEN,
         store: Optional[bool] | NotGiven = NOT_GIVEN,
-        stream_options: Optional[ChatCompletionStreamOptionsParam] | NotGiven = NOT_GIVEN,
+        stream_options: (
+            Optional[ChatCompletionStreamOptionsParam] | NotGiven
+        ) = NOT_GIVEN,
         temperature: Optional[float] | NotGiven = NOT_GIVEN,
         tool_choice: ChatCompletionToolChoiceOptionParam | NotGiven = NOT_GIVEN,
         tools: Iterable[ChatCompletionToolParam] | NotGiven = NOT_GIVEN,
@@ -562,14 +579,18 @@ class Completions(SyncAPIResource):
         modalities: Optional[List[ChatCompletionModality]] | NotGiven = NOT_GIVEN,
         n: Optional[int] | NotGiven = NOT_GIVEN,
         parallel_tool_calls: bool | NotGiven = NOT_GIVEN,
-        prediction: Optional[ChatCompletionPredictionContentParam] | NotGiven = NOT_GIVEN,
+        prediction: (
+            Optional[ChatCompletionPredictionContentParam] | NotGiven
+        ) = NOT_GIVEN,
         presence_penalty: Optional[float] | NotGiven = NOT_GIVEN,
         response_format: completion_create_params.ResponseFormat | NotGiven = NOT_GIVEN,
         seed: Optional[int] | NotGiven = NOT_GIVEN,
         service_tier: Optional[Literal["auto", "default"]] | NotGiven = NOT_GIVEN,
         stop: Union[Optional[str], List[str]] | NotGiven = NOT_GIVEN,
         store: Optional[bool] | NotGiven = NOT_GIVEN,
-        stream_options: Optional[ChatCompletionStreamOptionsParam] | NotGiven = NOT_GIVEN,
+        stream_options: (
+            Optional[ChatCompletionStreamOptionsParam] | NotGiven
+        ) = NOT_GIVEN,
         temperature: Optional[float] | NotGiven = NOT_GIVEN,
         tool_choice: ChatCompletionToolChoiceOptionParam | NotGiven = NOT_GIVEN,
         tools: Iterable[ChatCompletionToolParam] | NotGiven = NOT_GIVEN,
@@ -803,7 +824,9 @@ class Completions(SyncAPIResource):
         modalities: Optional[List[ChatCompletionModality]] | NotGiven = NOT_GIVEN,
         n: Optional[int] | NotGiven = NOT_GIVEN,
         parallel_tool_calls: bool | NotGiven = NOT_GIVEN,
-        prediction: Optional[ChatCompletionPredictionContentParam] | NotGiven = NOT_GIVEN,
+        prediction: (
+            Optional[ChatCompletionPredictionContentParam] | NotGiven
+        ) = NOT_GIVEN,
         presence_penalty: Optional[float] | NotGiven = NOT_GIVEN,
         response_format: completion_create_params.ResponseFormat | NotGiven = NOT_GIVEN,
         seed: Optional[int] | NotGiven = NOT_GIVEN,
@@ -811,7 +834,9 @@ class Completions(SyncAPIResource):
         stop: Union[Optional[str], List[str]] | NotGiven = NOT_GIVEN,
         store: Optional[bool] | NotGiven = NOT_GIVEN,
         stream: Optional[Literal[False]] | Literal[True] | NotGiven = NOT_GIVEN,
-        stream_options: Optional[ChatCompletionStreamOptionsParam] | NotGiven = NOT_GIVEN,
+        stream_options: (
+            Optional[ChatCompletionStreamOptionsParam] | NotGiven
+        ) = NOT_GIVEN,
         temperature: Optional[float] | NotGiven = NOT_GIVEN,
         tool_choice: ChatCompletionToolChoiceOptionParam | NotGiven = NOT_GIVEN,
         tools: Iterable[ChatCompletionToolParam] | NotGiven = NOT_GIVEN,
@@ -863,7 +888,10 @@ class Completions(SyncAPIResource):
                 completion_create_params.CompletionCreateParams,
             ),
             options=make_request_options(
-                extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
+                extra_headers=extra_headers,
+                extra_query=extra_query,
+                extra_body=extra_body,
+                timeout=timeout,
             ),
             cast_to=ChatCompletion,
             stream=stream or False,
@@ -909,7 +937,9 @@ class AsyncCompletions(AsyncAPIResource):
         modalities: Optional[List[ChatCompletionModality]] | NotGiven = NOT_GIVEN,
         n: Optional[int] | NotGiven = NOT_GIVEN,
         parallel_tool_calls: bool | NotGiven = NOT_GIVEN,
-        prediction: Optional[ChatCompletionPredictionContentParam] | NotGiven = NOT_GIVEN,
+        prediction: (
+            Optional[ChatCompletionPredictionContentParam] | NotGiven
+        ) = NOT_GIVEN,
         presence_penalty: Optional[float] | NotGiven = NOT_GIVEN,
         response_format: completion_create_params.ResponseFormat | NotGiven = NOT_GIVEN,
         seed: Optional[int] | NotGiven = NOT_GIVEN,
@@ -917,7 +947,9 @@ class AsyncCompletions(AsyncAPIResource):
         stop: Union[Optional[str], List[str]] | NotGiven = NOT_GIVEN,
         store: Optional[bool] | NotGiven = NOT_GIVEN,
         stream: Optional[Literal[False]] | NotGiven = NOT_GIVEN,
-        stream_options: Optional[ChatCompletionStreamOptionsParam] | NotGiven = NOT_GIVEN,
+        stream_options: (
+            Optional[ChatCompletionStreamOptionsParam] | NotGiven
+        ) = NOT_GIVEN,
         temperature: Optional[float] | NotGiven = NOT_GIVEN,
         tool_choice: ChatCompletionToolChoiceOptionParam | NotGiven = NOT_GIVEN,
         tools: Iterable[ChatCompletionToolParam] | NotGiven = NOT_GIVEN,
@@ -1152,14 +1184,18 @@ class AsyncCompletions(AsyncAPIResource):
         modalities: Optional[List[ChatCompletionModality]] | NotGiven = NOT_GIVEN,
         n: Optional[int] | NotGiven = NOT_GIVEN,
         parallel_tool_calls: bool | NotGiven = NOT_GIVEN,
-        prediction: Optional[ChatCompletionPredictionContentParam] | NotGiven = NOT_GIVEN,
+        prediction: (
+            Optional[ChatCompletionPredictionContentParam] | NotGiven
+        ) = NOT_GIVEN,
         presence_penalty: Optional[float] | NotGiven = NOT_GIVEN,
         response_format: completion_create_params.ResponseFormat | NotGiven = NOT_GIVEN,
         seed: Optional[int] | NotGiven = NOT_GIVEN,
         service_tier: Optional[Literal["auto", "default"]] | NotGiven = NOT_GIVEN,
         stop: Union[Optional[str], List[str]] | NotGiven = NOT_GIVEN,
         store: Optional[bool] | NotGiven = NOT_GIVEN,
-        stream_options: Optional[ChatCompletionStreamOptionsParam] | NotGiven = NOT_GIVEN,
+        stream_options: (
+            Optional[ChatCompletionStreamOptionsParam] | NotGiven
+        ) = NOT_GIVEN,
         temperature: Optional[float] | NotGiven = NOT_GIVEN,
         tool_choice: ChatCompletionToolChoiceOptionParam | NotGiven = NOT_GIVEN,
         tools: Iterable[ChatCompletionToolParam] | NotGiven = NOT_GIVEN,
@@ -1394,14 +1430,18 @@ class AsyncCompletions(AsyncAPIResource):
         modalities: Optional[List[ChatCompletionModality]] | NotGiven = NOT_GIVEN,
         n: Optional[int] | NotGiven = NOT_GIVEN,
         parallel_tool_calls: bool | NotGiven = NOT_GIVEN,
-        prediction: Optional[ChatCompletionPredictionContentParam] | NotGiven = NOT_GIVEN,
+        prediction: (
+            Optional[ChatCompletionPredictionContentParam] | NotGiven
+        ) = NOT_GIVEN,
         presence_penalty: Optional[float] | NotGiven = NOT_GIVEN,
         response_format: completion_create_params.ResponseFormat | NotGiven = NOT_GIVEN,
         seed: Optional[int] | NotGiven = NOT_GIVEN,
         service_tier: Optional[Literal["auto", "default"]] | NotGiven = NOT_GIVEN,
         stop: Union[Optional[str], List[str]] | NotGiven = NOT_GIVEN,
         store: Optional[bool] | NotGiven = NOT_GIVEN,
-        stream_options: Optional[ChatCompletionStreamOptionsParam] | NotGiven = NOT_GIVEN,
+        stream_options: (
+            Optional[ChatCompletionStreamOptionsParam] | NotGiven
+        ) = NOT_GIVEN,
         temperature: Optional[float] | NotGiven = NOT_GIVEN,
         tool_choice: ChatCompletionToolChoiceOptionParam | NotGiven = NOT_GIVEN,
         tools: Iterable[ChatCompletionToolParam] | NotGiven = NOT_GIVEN,
@@ -1635,7 +1675,9 @@ class AsyncCompletions(AsyncAPIResource):
         modalities: Optional[List[ChatCompletionModality]] | NotGiven = NOT_GIVEN,
         n: Optional[int] | NotGiven = NOT_GIVEN,
         parallel_tool_calls: bool | NotGiven = NOT_GIVEN,
-        prediction: Optional[ChatCompletionPredictionContentParam] | NotGiven = NOT_GIVEN,
+        prediction: (
+            Optional[ChatCompletionPredictionContentParam] | NotGiven
+        ) = NOT_GIVEN,
         presence_penalty: Optional[float] | NotGiven = NOT_GIVEN,
         response_format: completion_create_params.ResponseFormat | NotGiven = NOT_GIVEN,
         seed: Optional[int] | NotGiven = NOT_GIVEN,
@@ -1643,7 +1685,9 @@ class AsyncCompletions(AsyncAPIResource):
         stop: Union[Optional[str], List[str]] | NotGiven = NOT_GIVEN,
         store: Optional[bool] | NotGiven = NOT_GIVEN,
         stream: Optional[Literal[False]] | Literal[True] | NotGiven = NOT_GIVEN,
-        stream_options: Optional[ChatCompletionStreamOptionsParam] | NotGiven = NOT_GIVEN,
+        stream_options: (
+            Optional[ChatCompletionStreamOptionsParam] | NotGiven
+        ) = NOT_GIVEN,
         temperature: Optional[float] | NotGiven = NOT_GIVEN,
         tool_choice: ChatCompletionToolChoiceOptionParam | NotGiven = NOT_GIVEN,
         tools: Iterable[ChatCompletionToolParam] | NotGiven = NOT_GIVEN,
@@ -1695,7 +1739,10 @@ class AsyncCompletions(AsyncAPIResource):
                 completion_create_params.CompletionCreateParams,
             ),
             options=make_request_options(
-                extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
+                extra_headers=extra_headers,
+                extra_query=extra_query,
+                extra_body=extra_body,
+                timeout=timeout,
             ),
             cast_to=ChatCompletion,
             stream=stream or False,
@@ -1740,7 +1787,9 @@ class AsyncCompletionsWithStreamingResponse:
 
 
 def validate_response_format(response_format: object) -> None:
-    if inspect.isclass(response_format) and issubclass(response_format, pydantic.BaseModel):
+    if inspect.isclass(response_format) and issubclass(
+        response_format, pydantic.BaseModel
+    ):
         raise TypeError(
             "You tried to pass a `BaseModel` class to `chat.completions.create()`; You must use `beta.chat.completions.parse()` instead"
         )
