@@ -159,6 +159,7 @@ class CompletionCreateParamsBase(TypedDict, total=False):
 
     We generally recommend altering this or `temperature` but not both.
     """
+    top_k: Optional[int]
 
     user: str
     """

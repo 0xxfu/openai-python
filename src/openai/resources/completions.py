@@ -1107,6 +1107,7 @@ class AsyncCompletions(AsyncAPIResource):
         suffix: Optional[str] | NotGiven = NOT_GIVEN,
         temperature: Optional[float] | NotGiven = NOT_GIVEN,
         top_p: Optional[float] | NotGiven = NOT_GIVEN,
+        top_k: Optional[int] | NotGiven = NOT_GIVEN,
         user: str | NotGiven = NOT_GIVEN,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
@@ -1136,6 +1137,7 @@ class AsyncCompletions(AsyncAPIResource):
                     "suffix": suffix,
                     "temperature": temperature,
                     "top_p": top_p,
+                    "top_k": top_k,
                     "user": user,
                 },
                 completion_create_params.CompletionCreateParams,
